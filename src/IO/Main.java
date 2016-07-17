@@ -31,7 +31,14 @@ public class Main {
 		if(!new File(snapshotDirectory).exists()) {
 			new File(snapshotDirectory).mkdir();
 		}
+		@SuppressWarnings("unused")
 		OpenTileServer tileServer = new OpenTileServer(port);
+		
+		Runtime.getRuntime().addShutdownHook(new Thread() {
+			public void run() {
+				OpenTileServer.snapshot();
+			}
+		});
 	}
 	
 

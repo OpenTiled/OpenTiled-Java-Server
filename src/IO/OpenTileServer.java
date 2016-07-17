@@ -6,10 +6,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.io.StringReader;
 import java.io.StringWriter;
-import java.io.UnsupportedEncodingException;
 import java.net.ServerSocket;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -29,7 +27,6 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
-import org.w3c.dom.Node;
 import org.xml.sax.InputSource;
 
 import Users.User;
@@ -116,7 +113,6 @@ public class OpenTileServer {
 					  "}");
 		broadcast();
 		int pos = (((y)*tilesetWidth) + x);
-		int counter = 0;
 		String newMapData = "";
 		if(pos < mapDataArray.length && pos > -1) {
 			mapDataArray[pos] = Integer.toString(tileID);

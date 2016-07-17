@@ -3,15 +3,12 @@ package Users;
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.nio.ByteBuffer;
-import java.util.Arrays;
 
 import javax.imageio.ImageIO;
 
@@ -27,8 +24,8 @@ public class User {
 	private final Thread inputThread;
 	private InputStream input;
 	
-	private Thread outputThread;
 	private OutputStream output;
+	@SuppressWarnings("unused")//Will be used later to determine player location on map
 	private float posX, posY;
 	
 	private String payload; 
@@ -52,7 +49,6 @@ public class User {
 				while(true) {
 					try {
 						inputLine = reader.readLine();
-						System.out.println(inputLine);
 						if(inputLine.contains("req:map")) {
 							out.writeBytes(OpenTileServer.getTMXDocString() + "\n");
 							out.writeBytes("EOF \n");
