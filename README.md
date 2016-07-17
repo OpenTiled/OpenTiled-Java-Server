@@ -9,6 +9,7 @@ Direct users to https://github.com/OpenTiled/OpenTiled-Java-Client to access you
 
 ### Run server:
 Have java installed and run:
+You may need java 8 to run the server. If there are errors when running the jar make sure you are using java 8.
 ```sh
 java -jar OpenTiled-Server.jar [args]
 ```
