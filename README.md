@@ -1,4 +1,4 @@
-![OpenTiled](https://raw.githubusercontent.com/OpenTiled/OpenTiled-Java-Server/master/logos/OpenTiledLogo.png)
+<img src="https://raw.githubusercontent.com/OpenTiled/OpenTiled-Java-Server/master/logos/OpenTiledLogo.png" width="250">
 # OpenTiled Server
 
 OpenTiled Server is a java server that allows multiple clients to edit one tile map. This project is based on the Tiled map editor: https://github.com/bjorn/tiled
